@@ -222,12 +222,10 @@ body {
   display:grid;
   align-items: center;
   justify-content: space-between;
-  /* gap: 1px 1px; */
   grid-area: 100%;
   grid-template-columns: 4fr 4fr 4fr 4fr;
   row-gap: 60px;
   column-gap: 10px;
-  /* padding-left: 40%; */
 }
 
 .ToDos{
@@ -240,21 +238,18 @@ body {
     max-height: 80px;
     cursor: pointer;
 }
-
+.ToDos:hover{
+  /* padding: 135px 85px; */
+  box-shadow: 30px 30px 45px rgba(0,0,0,.7) ;
+}
 .ToDos .title{
   font-size: 160%;
-  top: 15%;
+  top: 20%;
   left: 12%;  
   position: absolute;
   display: inline-block;
 }
 
-.ToDos .details{
-  top: 30%;
-  left: 22%;  
-  position: absolute;
-  display: inline-block;
-}
 
 details > summary {
   padding: 0px;
@@ -274,7 +269,7 @@ details > p {
 }
 
 .ToDos .details{
-  top: 25%;
+  top: 30%;
   left: 15%;  
   position: absolute;
   display: inline-block;
