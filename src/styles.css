@@ -1,0 +1,324 @@
+body {
+	background: linear-gradient(-45deg, #CAC531, #F3F9A7, #adbe0e80, #c9d523);
+	background-size: 400% 400%;
+	animation: gradient 9s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.taskr{
+    top: 1%;
+    left: 93%;  
+    position: fixed;
+    display: inline-block;
+    background: none;
+    color: whitesmoke;
+    padding: 1.2rem 1.7rem;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 70rem;
+    color: #CAC531;
+}
+
+.taskr p{
+  display: none;
+  position: absolute;
+  top:35%;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+  padding: 1em;
+  font-size: 40%;
+  width: 100%;
+}
+
+.taskr:hover p {
+  color: black;
+  display: block;
+}
+
+.taskr span{
+  color: black;
+}
+
+ .new{
+  position: absolute;  
+}
+
+ .add{
+    top: 85%;
+    left: 92%;  
+    position: fixed;
+    display: inline-block;
+    background: white;
+    color: whitesmoke;
+    padding: 1.2rem 1.7rem;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 70rem;
+    color: #CAC531;
+    z-index: 100;
+    
+}
+
+.delb{
+  top: 70%;
+  left: 92%;  
+  position: fixed;
+  display: inline-block;
+  background: white;
+  padding: 1.4rem 1.7rem;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  /* font-size: 1.8rem; */
+  border-radius: 70rem;
+  color: #CAC531;
+  z-index: 99;
+}
+.delb i{
+  font-size: 1.8rem;
+}
+
+.delb p{
+  display: none;
+  position: absolute;
+  top:55%;
+  bottom: 5%;
+  left: 0.1%;
+  right: 1%; 
+  padding: .5em;
+  font-size: 80%;
+  width: 100%;
+}
+
+.delb:hover p {
+  color: black;
+  display: block;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: none;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgba(255,255,255,1);
+    box-shadow: 0 15px 30px rgba(0,0,0,.4);
+    width: 400px;
+    height: 330px;
+    max-width: 80%;
+  }
+  
+  .popup.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .popup-header {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: rgba(0,0,0,.7);
+  }
+  
+  .popup-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-left: 30%;
+  }
+  
+  .popup-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 200%;
+    font-weight: bold;
+    color: #c9d523;
+  }
+  
+  .popup-body {
+    padding: 10px 15px;
+    
+  }
+
+  .popup-body .ttd{
+    size: 300%;
+  }
+
+  .popup .popup-body .tt{
+    width: 90%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+  }
+
+  .popup .popup-body .td{
+    width: 90%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+  }
+
+  .popup .popup-body .dt{
+    width: 90%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+  }
+  
+  .popup .popup-body .AddToDo{
+    background-color: white;
+    color: #c9d523;
+    padding-left: 88%;
+    padding-top: 16px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 120%;
+  }
+
+#popup-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    /* background: rgba(0,0,0,.4); */
+    pointer-events: none;
+}
+
+#popup-overlay.active{
+    pointer-events: all;
+    opacity: 1;
+}
+
+#ToDoList{
+  display:grid;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 1px 1px; */
+  grid-area: 100%;
+  grid-template-columns: 4fr 4fr 4fr 4fr;
+  row-gap: 60px;
+  column-gap: 10px;
+  /* padding-left: 40%; */
+}
+
+.ToDos{
+    position: relative;
+    background-color: white;
+    padding: 130px 85px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,.4);
+    max-width: 20%;
+    max-height: 80px;
+    cursor: pointer;
+}
+
+.ToDos .title{
+  font-size: 160%;
+  top: 15%;
+  left: 12%;  
+  position: absolute;
+  display: inline-block;
+}
+
+.ToDos .details{
+  top: 30%;
+  left: 22%;  
+  position: absolute;
+  display: inline-block;
+}
+
+details > summary {
+  padding: 0px;
+  width: 7px;
+  background-color: white;
+  border: none;
+  color: none;
+  color: white;
+  cursor: pointer;
+  display: inline;
+}
+
+details > p {
+  background-color:white;
+  padding: 5px;
+  margin: 0;
+}
+
+.ToDos .details{
+  top: 25%;
+  left: 15%;  
+  position: absolute;
+  display: inline-block;
+  max-width: 55%;
+}
+
+.ToDos .details .detailsdec{
+  color: black;
+}
+
+
+.ToDos .details .de{
+  color: black;
+  font-size: 90%;
+}
+
+.ToDos .details .dat{
+  color: red;
+  font-size: 90%;
+}
+
+.ToDos .DelToDo{
+  top: 10%;
+  padding-bottom: 280px;
+  left: 82%;  
+  position: absolute;
+  display: inline-block;
+  font-size: 160%;
+}
+
+.completed{
+  text-decoration: line-through;
+  color: #CAC531;
+}
+
+
+.ToDos button{
+    height: 100%;
+    color: #CAC531;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+

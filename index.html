@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <script defer src="src/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="taskr">
+  <span id="Ta"><span class="pendingTasks"></span></span>
+  <p class="remde">Tasks pending</p>
+  </div>
+    <button data-popup-target="#popup" id="add" class="add">+</button>
+    <div class="popup" id="popup">
+      <div class="popup-header">
+        <div class="title">Add New To-Do</div>
+        <button close-popup class="close-button">&times;</button>
+      </div>
+      <div class="popup-body" ">
+          <p class="ttd">Title</p>
+          <input class="tt" id="tt" type="text" placeholder=""><br>
+          <p class="tdd">Description</p>
+          <input class="td" id="td" type="text" placeholder=""><br>
+          <p class="dtt">Deadline</p>
+          <input class="dt" id="dt" type="date" ><br>
+          <button id="AddToDo" class="AddToDo">Add</button>
+          </div>
+      </div>
+    <div id="popup-overlay"></div>
+    <button onclick="clearContent()" class="delb"><i class="fa fa-trash-o" ></i> <p>Delete All</p></button>
+    <div id="ToDoList"></div>
+</body>
+</html>
